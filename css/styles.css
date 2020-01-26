@@ -1,12 +1,12 @@
 @font-face {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   src: url("../fonts/OpenSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.woff");
   font-weight: 400;
   font-style: normal;
@@ -45,18 +45,21 @@ body {
 }
 
 .icon {
+  display: block;
+  width: 40vw;
+  margin: auto;
   fill: #ffffff;
-  width: 25vh;
 }
 
 .icon_footer {
   fill: #ffffff;
-  width: 25vh;
+  width: 25vw;
 }
 
 .welcome__container {
   position: relative;
   z-index: 1;
+  margin: 0 auto;
 }
 
 .welcome__info {
@@ -65,18 +68,23 @@ body {
   text-transform: uppercase;
   font-family: "Open Sans";
   font-weight: bold;
-  text-align: center;
+  justify-content: center;
 }
 
 .welcome__recruited {
+  min-width: 100%;
   text-decoration: none;
   color: #ffffff;
 }
 
 .welcome__play {
   text-decoration: none;
-  color: #ffffff;
   text-align: left;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 1em;
 }
 
 .welcome__footer {
@@ -85,41 +93,38 @@ body {
   justify-content: center;
 }
 
-.search {
-  min-width: 50vw;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0.5em;
-  justify-content: center;
-}
-
-.icon-logo {
+.icon_logo {
   fill: #ffffff;
-  align-self: center;
 }
 
 .button {
   display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
+  margin-bottom: 1.5em;
   border: none;
-  text-transform: uppercase;
-  color: #ffffff;
   cursor: pointer;
   background-color: #5e42b0;
+}
+
+.button_link {
+  display: flex;
   justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .button:hover {
   opacity: 0.7;
 }
 
-.button-text {
+.button_text {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-decoration: none;
 }
 
 .button-bottom {
@@ -303,12 +308,21 @@ body {
   bottom: 0;
 }
 
+.footer__container {
+  margin: 0 auto;
+}
+
+.footer_logo_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo_footer {
   display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  z-index: 2;
-  background-color: #5e42b0;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #754ed8, #51339e);
 }
 
 .logo_icon {
@@ -326,6 +340,13 @@ body {
 .footer__container {
   position: relative;
   z-index: 1;
+  margin: 0 auto;
+}
+
+.buttons__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer__info {
@@ -338,6 +359,11 @@ body {
   align-items: center;
 }
 
+.footer__text {
+  color: #a496ca;
+  font-weight: normal;
+}
+
 @media (max-width: 640px) {
   .header {
     font-size: 28px;
@@ -348,25 +374,28 @@ body {
     padding-top: 30px;
   }
 
+  .welcome__container {
+    padding-bottom: 77px;
+  }
+
   .welcome__info {
-    padding-top: 4.2em;
-    padding-left: 3.6em;
-    max-width: 10em;
+    margin-top: 4.5em;
   }
 
   .welcome__play {
-    padding-top: 0.4em;
-    padding-left: 1.7em;
+    margin-left: 30vw;
+    margin-right: 10vw;
+    margin-top: 0.5em;
   }
 
   .welcome__footer {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    margin-top: 1.8em;
   }
 
   .button {
     width: 35em;
     height: 3.75em;
+    min-width: 50vw;
     margin-left: auto;
     margin-right: auto;
     border: none;
@@ -374,18 +403,13 @@ body {
     border-radius: 2em;
   }
 
-  .icon-logo {
+  .icon_logo {
     width: 9%;
-  }
-
-  .button-text {
-    max-width: 10em;
-    padding-left: 2em;
   }
 
   .card {
     display: flex;
-    padding-top: 0.5em;
+    padding-top: 0.4em;
   }
 
   .card-name {
@@ -475,15 +499,20 @@ body {
   .footer {
     background-image: url("../img/game_767.jpg");
     max-width: 320px;
-    padding-bottom: 12px;
+  }
+
+  .buttons__footer {
+    margin-top: 3.2em;
+    margin-bottom: 3em;
+  }
+
+  .footer__container {
+    padding-bottom: 20px;
   }
 
   .footer__info {
-    padding-top: 216px;
-    padding-bottom: 25px;
-  }
-
-  .footer__title {
+    margin-top: 50px;
+    margin-bottom: 25px;
     font-size: 32px;
     font-weight: bold;
   }
@@ -495,9 +524,8 @@ body {
   .logo_footer {
     width: 70px;
     height: 70px;
+    margin-top: 100px;
     border-radius: 10px;
-    top: 100px;
-    left: 120px;
   }
 
   .logo_icon {
@@ -512,24 +540,26 @@ body {
   }
 
   .icon {
-    padding-top: 5vh;
+    width: 28vw;
+    padding-top: 5vw;
+  }
+
+  .welcome__container {
+    padding-bottom: 80px;
   }
 
   .welcome__info {
-    max-width: 10em;
-    padding-top: 2.2em;
-    padding-left: 1.2em;
+    margin-top: 2.5em;
   }
 
   .welcome__play {
-    padding-left: 1.7em;
+    margin-left: 25vw;
+    margin-right: 10vw;
     line-height: 1.2em;
   }
 
   .welcome__footer {
-    min-width: 100vw;
-    padding-top: 280px;
-    padding-bottom: 72px;
+    margin-top: 4.5em;
   }
 
   .button {
@@ -542,20 +572,15 @@ body {
     margin-right: 10px;
   }
 
-  .icon-logo {
+  .icon_logo {
     width: 15%;
     margin: 0;
     padding: 0;
   }
 
-  .button-text {
-    max-width: 150px;
-    padding-left: 15px;
-  }
-
   .card {
     width: 100vw;
-    padding-top: 65px;
+    padding-top: 55px;
   }
 
   .card-name {
@@ -596,8 +621,8 @@ body {
   .card:nth-child(even) .card-text .card-list .list_element {
     justify-content: flex-start;
     padding-left: 20px;
-    padding-top: 24px;
-    padding-bottom: 21px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   .card-list {
@@ -648,7 +673,7 @@ body {
 
   .content {
     position: relative;
-    padding-top: 90px;
+    padding-top: 95px;
     padding-left: 20px;
     padding-bottom: 75px;
   }
@@ -683,13 +708,12 @@ body {
     background-image: url("../img/game_767.jpg");
     position: relative;
     max-width: 100%;
+    margin-top: 30px;
+    padding-bottom: 15px;
   }
 
   .footer__info {
-    padding-top: 320px;
-  }
-
-  .footer__title {
+    margin-top: 65px;
     font-size: 80px;
     font-weight: bold;
   }
@@ -700,78 +724,66 @@ body {
   }
 
   .logo_footer {
-    position: absolute;
+    margin-top: 120px;
     width: 135px;
     height: 135px;
-    top: 135px;
-    left: 40vw;
     border-radius: 30px;
   }
 
-  .logo_icon {
-    padding-top: 5px;
-    fill: white;
+  .buttons__footer {
+    margin-top: 200px;
+    margin-bottom: 0;
   }
 
-  .icon_footer {
-    margin-top: -25px;
+  .icon_logo {
+    padding-top: 5px;
+    fill: white;
   }
 }
 
 @media (min-width: 961px) {
   .header {
     font-size: 90px;
-    line-height: 100px;
     background-image: url("../img/football_1920.jpg");
   }
 
+  .welcome__container {
+    padding-bottom: 90px;
+  }
+
   .icon {
-    padding-top: 5vh;
+    width: 10vw;
+    padding-top: 2vw;
   }
 
   .welcome__info {
-    padding-top: 250px;
-    padding-left: 170px;
+    margin-top: 3.1em;
   }
 
   .welcome__play {
-    padding-left: 450px;
+    margin-left: 23vw;
+    margin-right: 5vw;
     line-height: 100px;
   }
 
   .welcome__footer {
-    min-width: 100vw;
-    padding-top: 200px;
-    padding-bottom: 60px;
-  }
-
-  .search {
-    justify-content: flex-start;
-  }
-
-  .search:nth-child(odd) {
-    justify-content: flex-end;
+    margin-top: 2em;
   }
 
   .button {
     width: 310px;
     height: 75px;
-    margin-left: 30px;
-    margin-right: 20px;
     border: none;
     font-size: 14px;
     border-radius: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
-  .icon-logo {
+  .icon_logo {
     width: 15%;
     margin: 0;
     padding: 0;
-  }
-
-  .button-text {
-    max-width: 150px;
-    padding-left: 15px;
   }
 
   .card {
@@ -917,49 +929,52 @@ body {
     background-image: url("../img/game_767.jpg");
     position: relative;
     max-width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .footer_logo_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 190px;
   }
 
   .footer__info {
-    max-width: 700px;
-    padding-top: 270px;
-    padding-left: 35vw;
-  }
-
-  .footer__title {
+    display: flex;
+    max-width: 750px;
+    margin: 0;
+    margin-left: 2vw;
     font-size: 80px;
-    line-height: 50px;
     font-weight: bold;
+    line-height: 90px;
+    justify-content: flex-start;
   }
 
   .footer__text {
-    padding-top: 20px;
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 20px;
   }
 
   .logo_footer {
-    position: absolute;
     width: 135px;
     height: 135px;
-    top: 250px;
-    left: 27vw;
     border-radius: 30px;
   }
 
-  .logo_icon {
-    fill: white;
-    padding-top: 5px;
+  .buttons__footer {
+    margin-top: 160px;
+    margin-bottom: 200px;
   }
 
-  .icon_footer {
-    margin-top: 200px;
+  .icon_logo {
+    fill: white;
   }
 }
 
 @media (min-width: 961px) and (max-width: 1440px) {
   .header {
     font-size: 70px;
-    line-height: 80px;
   }
 
   .content {
@@ -987,31 +1002,6 @@ body {
     top: 180px;
     left: 45.5vw;
   }
-
-  .footer__info {
-    max-width: 500px;
-    padding-top: 270px;
-    padding-left: 35vw;
-  }
-
-  .footer__title {
-    font-size: 60px;
-    line-height: 40px;
-  }
-
-  .footer__text {
-    padding-top: 20px;
-    font-size: 28px;
-    line-height: 28px;
-  }
-
-  .logo_footer {
-    width: 100px;
-    height: 100px;
-    top: 265px;
-    left: 24vw;
-    border-radius: 20px;
-  }
 }
 
 /*body {
@@ -1029,4 +1019,5 @@ body::after {
   opacity: 0.3;
   pointer-events: none;
   z-index: 99;
-}*/
+}
+*/
