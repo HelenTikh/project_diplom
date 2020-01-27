@@ -835,6 +835,7 @@ h1 {
 
   .card:nth-child(even) .card-image {
     padding-left: calc(100vw - calc(1120px - calc(1120px - 60vw)));
+    overflow: hidden;
   }
 
   .card-list {
